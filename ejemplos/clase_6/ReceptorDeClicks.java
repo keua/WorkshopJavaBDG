@@ -15,12 +15,14 @@ public class ReceptorDeClicks implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent obj) {
-        if (boton.getText().equals("X")) {
-            this.boton.setText("O");
-        } else if (boton.getText().equals("O")) {
-            this.boton.setText("X");
-        } else {
-            this.boton.setText("O");
+        if (this.boton.getText().equals("-")) {
+            if (Totito.ultimoMovimiento.equals("X")) {
+                this.boton.setText("O");
+                Totito.ultimoMovimiento = "O";
+            } else {
+                this.boton.setText("X");
+                Totito.ultimoMovimiento = "X";
+            }
         }
     }
 }

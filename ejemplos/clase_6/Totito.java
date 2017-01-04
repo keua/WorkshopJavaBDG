@@ -10,6 +10,8 @@ import java.awt.Container;
 
 public class Totito {
 
+    public static String ultimoMovimiento = "";
+
     public Totito () {
         
     }
