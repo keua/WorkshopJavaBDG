@@ -11,6 +11,7 @@ import java.awt.Container;
 public class Totito {
 
     public static String ultimoMovimiento = "";
+    public static JButton[] tablero = new JButton[9];
 
     public Totito () {
         
@@ -20,7 +21,7 @@ public class Totito {
         JFrame ventana = new JFrame();
         ventana.setSize(400,400);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JButton[] tablero = new JButton[9];
+        
         for(int i=0;i<9;i++){
             tablero[i] = new JButton("-");
             tablero[i].addActionListener(new ReceptorDeClicks(tablero[i]));
@@ -47,5 +48,6 @@ public class Totito {
         c.add(jp2);
         c.add(jp3);
         ventana.setVisible(true);
+
     }
 }
